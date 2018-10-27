@@ -1,4 +1,6 @@
-package org.htsjdk.core.utils;
+package org.htsjdk.core.utils.internal;
+
+import org.htsjdk.core.api.annotations.Private;
 
 import java.util.Collection;
 import java.util.function.Supplier;
@@ -9,6 +11,7 @@ import java.util.function.Supplier;
  * <p>All the methods in this class throw {@link IllegalArgumentException} if conditions are not
  * met.
  */
+@Private
 public final class ParamUtils {
 
     // cannot be instantiated

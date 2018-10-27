@@ -1,4 +1,4 @@
-package org.htsjdk.core.utils;
+package org.htsjdk.core.utils.internal;
 
 import org.htsjdk.test.HtsjdkBaseTest;
 import org.testng.Assert;
