@@ -29,5 +29,12 @@ build/
 # IntelliJ stuff
 .idea/
 
+# Eclipse stuff
+*.classpath
+*.project
+*.settings
+*/bin/
+*/test-output/*
+
 # OSX FileSystem spam
 .DS_STORE
