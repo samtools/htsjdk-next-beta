@@ -8,6 +8,8 @@ buildscript {
 plugins {
     id 'com.github.johnrengelman.shadow' version '2.0.4'
     id 'java-library'
+    id 'scala'
+    id 'com.github.maiflai.scalatest' version '0.21'
 }
 
 //This allows you to build a single shadowJar with the contents of all the
@@ -18,6 +20,8 @@ dependencies {
 
 subprojects {
     apply plugin: 'java-library'
+    apply plugin: 'scala'
+    apply plugin: 'com.github.maiflai.scalatest'
 
     group 'org.htsjdk'
     version '0.0.1'
@@ -33,13 +37,12 @@ subprojects {
         testCompile "com.google.jimfs:jimfs:1.1"
         testCompile "org.apache.commons:commons-lang3:3.7"
 
+        testCompile "org.scala-lang:scala-library:2.12.4"
+        testCompile 'org.scalatest:scalatest_2.12:3.0.5'
+        testRuntime 'org.pegdown:pegdown:1.4.2'
+
         compile 'commons-io:commons-io:2.5'
     }
-
-    test {
-        useTestNG{}
-    }
-
 }
 
 project(':cram') {
