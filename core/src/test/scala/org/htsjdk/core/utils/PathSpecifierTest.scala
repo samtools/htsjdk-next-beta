@@ -194,5 +194,4 @@ class PathSpecifierTest extends UnitTest {
     new PathSpecifier(path.toString).getOutputStream.close()
     new PathSpecifier(uri).getOutputStream.close()
   }
-
-  }
+}
