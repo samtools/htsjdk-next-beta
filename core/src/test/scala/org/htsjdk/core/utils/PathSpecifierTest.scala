@@ -190,8 +190,8 @@ class PathSpecifierTest extends UnitTest {
 
   it should "be able to generate an output stream for valid paths" in {
     val path = makeTempFile("some_text_file.", ".txt")
-    val uri  = s"file://${path.toAbsolutePath}"
-    new PathSpecifier(path.toString).getOutputStream.close()
-    new PathSpecifier(uri).getOutputStream.close()
+    val pathOnlyString = path.toUri().normalize().getPath()
+    new PathSpecifier(path.toString()).getOutputStream.close()
+    new PathSpecifier(s"file://$pathOnlyString" ).getOutputStream.close()
   }
 }
